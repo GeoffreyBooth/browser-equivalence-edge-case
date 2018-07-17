@@ -1,10 +1,4 @@
-var mode = 'In sloppy mode';
-
-try {
-	delete Object.prototype; // Throws an error only in strict mode
-} catch (exception) {
-	mode = 'In strict mode';
-}
+var mode = this === undefined ? 'In strict mode' : 'In sloppy mode';
 
 if (typeof document !== 'undefined') {
 	document.body.innerHTML = mode;
