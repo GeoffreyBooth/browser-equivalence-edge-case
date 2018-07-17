@@ -1,4 +1,4 @@
-var mode = this === undefined ? 'strict' : 'sloppy';
+var mode = this === undefined ? 'In strict mode' : 'In sloppy mode';
 
 if (typeof document !== 'undefined') {
 	document.body.innerHTML = mode;
